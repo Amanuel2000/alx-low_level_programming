@@ -1,32 +1,32 @@
 #include <stdio.h>
 /**
-*main - print single digit numbers
-*Description: print single digit numbers with commas 
+*main -> assign a random number to the variable n each time it is executed
+*and print the last digit of the number stored in the variable n
 *Return: Always 0 (Success)
 */
+
 int main(void)
 {
-	int i, j;
+	int ch;
 
-	i = 48;
-	j = 48;
+	int n;
 
-	while (i < 58)
+	for (ch = 48; ch <= 57; ch++)
 	{
-		j = 48;
-		while (j < 58)
+		for (n = 49; n <= 57; n++)
 		{
-			putchar(i);
-			putchar(j);
-			if (i < 57 || j < 57)
-			{	
-				putchar(44);
-				putchar(32);
+			if (n > ch)
+			{
+				putchar(ch);
+				putchar(n);
+				if (ch != 56 || n != 57)
+				{
+					putchar(44);
+					putchar(32);
+				}
 			}
-			j++;
 		}
-		i++;
 	}
-	putchar(10);
-	return (0);
+putchar(10); /* this is an ascii code for new line*/
+return (0);
 }
