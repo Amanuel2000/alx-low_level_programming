@@ -1,27 +1,38 @@
-#include<stdio.h>
-#include<stdio.h>                                                                                                                     
+#include <stdio.h>
 /**
-*main - print the letters of the alphabet
-*Description: print the letters of the alphabet in lower then in uppercase
+*main -> assign a random number to the variable n each time it is executed
+*and print the last digit of the number stored in the variable n
 *Return: Always 0 (Success)
 */
 
 int main(void)
-{
-	int i, j;
 
-	i = 97;
-	j = 65;
-	while (i < 123)
+{
+
+	int ch;
+
+
+
+	for (ch = 97; ch <= 122; ch++)
+
 	{
-		putchar(i);
-		i++;
+
+		putchar(ch);
+
 	}
-	while (j < 91)
+
+	for (ch = 65; ch <= 90; ch++)
+
 	{
-		putchar(j);
-		j++;
+
+		putchar(ch);
+
 	}
-	putchar(10);
+
+	putchar(10); /* this is an ascii code for new line*/
+
+
+
 	return (0);
-}	
+
+}
