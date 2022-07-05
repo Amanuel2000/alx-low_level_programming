@@ -1,1 +1,2 @@
-0. This is creating 0-put_char file
+0.  a program that prints _putchar, followed by a new line.
+1. a function that prints the alphabet, in lowercase, followed by a new line.
