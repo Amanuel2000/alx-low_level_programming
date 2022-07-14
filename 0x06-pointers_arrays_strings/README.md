@@ -8,3 +8,5 @@
 7. a function that encodes a string into 1337.
 8. a function that encodes a string using rot13.
 9. a function that prints an integer.
+10. A dream doesn't become reality through magic; it takes sweat, determination and hard work
+11. It is the addition of strangeness to beauty that constitutes the romantic character in art
