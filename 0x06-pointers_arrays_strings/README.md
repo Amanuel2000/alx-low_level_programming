@@ -10,3 +10,4 @@
 9. a function that prints an integer.
 10. A dream doesn't become reality through magic; it takes sweat, determination and hard work
 11. It is the addition of strangeness to beauty that constitutes the romantic character in art
+12. Noise is a buffer, more effective than cubicles or booth walls
