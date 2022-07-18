@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
 * _strchr -> string character
 * @s: string given
@@ -18,7 +19,7 @@ char *_strchr(char *s, char c)
 		}
 		if (a == 0)
 		{
-		return (NULL);
+			return (NULL);
 		}
 	}
 }
