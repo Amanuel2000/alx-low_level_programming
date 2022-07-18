@@ -1,25 +1,24 @@
-#include "main.h"
+#include"main.h"
 
 /**
-* _strchr -> string character
+* _strchr ->  function that locates a character in a string.
 * @s: string given
-* @c: another char
+* c: another character
 * Return: a string
 */
 char *_strchr(char *s, char c)
 {
-	int a;
+	int a = 0, b;
 
-	while (1)
+	while (s[a])
 	{
-		a = *s++;
-		if (a == c)
+		a++;
+		for (b = 0; b < a; b++)
 		{
-			return (s - 1);
+			if (c == s[b])
+			s += b;
+			return (s);
 		}
-		if (a == 0)
-		{
-			return (NULL);
-		}
+		return ('\0');  /* code */
 	}
 }
