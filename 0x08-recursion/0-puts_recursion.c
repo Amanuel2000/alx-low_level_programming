@@ -1,10 +1,17 @@
 #include "main.h"
+
 /**
-* main - check the code
-*Return: Always 0.
+* _puts_recursion -> this is a function to print string recursivly
+* @s: string paramenter
 */
-int main(void)
+void _puts_recursion(char *s)
 {
-	_puts_recursion("This is a recursion\n");
-	return (0);
+	if (*s == '\0')
+	{
+		_putchar('\n');
+		return;
+	}
+	_putchar(*s);
+	s++;
+	_puts_recursion(s);
 }
