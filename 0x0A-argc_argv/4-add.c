@@ -1,91 +1,55 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 /**
-*num_checker - checks if a given char is number or not
-*@a: char to be checked
-*Return: 1, if its a number, else 0
+* checkNum - verifies if string has only numbers
+* @s: string to check
+* Description: return 1 if only numbers in string, 0 if not
+* Return: 1 if only numbers, 0 if not
+*/
 
-**/
-
-int num_checker(char *a)
-
+int checkNum(char *s)
 {
+	int i;
 
-	int i, num, len;
-
-
-
-	i = 0;
-
-	num = 0;
-
-	len = strlen(a);
-
-	while (i < len)
+	for (i = 0; s[i] != '\0'; i++)
 
 	{
-
-		if (a[i] < '0' || a[i] > '9')
-
-		{
-
-			return (-1);
-
-		}
-
-		else
-
-			num = num * 10 + (a[i] - '0');
-
-		i++;
-
+		if (s[i] < '0' || s[i] > '9')
+			return (0);
 	}
-
-	return (num);
-
+	return (1);
 }
 
 /**
-* main - add positive numbers
-* @argc: arguement count
-* @argv: array of pointers to arguement strings
-* Return: result of addition or 1
-**/
+* main - find least amount of coins needed for change
+* @argc: number of parameters entered
+* @argv: strings entered including file name
+* Description: prints the minimum number of coins to make change
+* Return: zero
+*/
 
-int main(int argc, char *argv[])
-
+int main(int argc, char **argv)
 {
-
-	int i, num, sum;
-
-
+	int sum, i;
 
 	sum = 0;
 
 	for (i = 1; i < argc; i++)
-
 	{
-
-		num = num_checker(argv[i]);
-
-		if (num == -1)
-
+		if (checkNum(argv[i]) == 0)
 		{
-
 			printf("Error\n");
-
 			return (1);
-
 		}
-
-		sum += num;
-
+		if (atoi(argv[i]) <= 0)
+		{
+			printf("Error\n");
+			return (1);
+		}
+		sum += atoi(argv[i]);
 	}
-
 	printf("%d\n", sum);
-
 	return (0);
-
 }
