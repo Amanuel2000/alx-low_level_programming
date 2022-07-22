@@ -1,22 +1,17 @@
+#include "main.h"
+
 #include <stdio.h>
 
 /**
-* main -> this is a function to print its name
-
-* @argc: argc parameter
-
-* @argv: an array of a command listed
-
-* Return: 0 for success
-
+* main - print number of arguments entered
+* @argc: number of arguments
+* @argv: arguments entered
+* Description: print number of arguments
+* Return: return zero
 */
-
-int main(int argc, char *argv[] __attribute__((unused)))
-
+int main(int argc, char *argv[])
 {
-
 	printf("%d\n", argc - 1);
-
+	argv = argv;
 	return (0);
-
 }
