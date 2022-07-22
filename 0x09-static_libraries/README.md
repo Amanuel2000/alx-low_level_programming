@@ -1,1 +1,1 @@
-This all about static libraries
+0. static library libmy.a containing all the functions listed below:
