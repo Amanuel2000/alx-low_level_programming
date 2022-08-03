@@ -1,73 +1,63 @@
 #include "3-calc.h"
-#include <stdio.h>
+
 #include <stdlib.h>
 
-/**
-* op_add - sum of two numbers
-* @a: first integer
-* @b: second integer
-* Return: sum (integer)
-*/
+#include <stdio.h>
 
-int op_add(int a, int b)
-{
-	return (a + b);
-}
+#include <string.h>
+
+
 
 /**
-* op_sub - difference between two numbers
-* @a: first integer
-* @b: second integer
-* Return: difference (integer)
+* get_op_func - get an operation
+* @s: operator
+* Return: No
 */
 
-int op_sub(int a, int b)
+
+
+int (*get_op_func(char *s))(int, int)
+
 {
-	return (a - b);
-}
 
-/**
-* op_mul - product of two numbers
-* @a: first integer
-* @b: second integer
-* Return: product (integer)
-*/
+	op_t ops[] = {
 
-int op_mul(int a, int b)
-{
-	return (a * b);
-}
+		{"+", op_add},
 
-/**
-* op_div - quotient of two numbers
-* @a: first integer (dividend)
-* @b: second integer (divisor)
-* Return: quotient (integer)
-*/
+		{"-", op_sub},
 
-int op_div(int a, int b)
-{
-	if (b == 0)
+		{"*", op_mul},
+
+		{"/", op_div},
+
+		{"%", op_mod},
+
+		{NULL, NULL}
+
+	};
+
+	int i = 0;
+
+
+
+	while (ops[i].op)
+
 	{
-		printf("Error\n");
-		exit(100);
-	}
-	return (a / b);
-}
 
-/**
-* op_mod - modulo (remainder)
-* @a: first integer (dividend)
-* @b: second integer (divisor)
-* Return: remainder of division (integer)
-*/
+		if (strcmp(s, ops[i].op) == 0)
 
-int op_mod(int a, int b)
-{
-	if (b == 0)
-	{
-		printf("Error\n");
-		exit(100);
+		{
+
+			return (ops[i].f);
+
+		}
+
+		i++;
+
 	}
-	return (a % b);
+
+	printf("Error\n");
+
+	exit(99);
+
 }

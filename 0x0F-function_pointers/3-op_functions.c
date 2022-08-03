@@ -1,34 +1,75 @@
-#include "3-calc.h"
 #include <stdio.h>
 #include <stdlib.h>
 
 /**
-* get_op_func - finds operation function
-* @s: operator (+, -, *, /, %)
-* Return: function pointer
+* op_add - addition
+* @a: sumnd 1
+* @b: sumnd 2
+* Return: rsult
 */
 
-int (*get_op_func(char *s))(int, int)
+int op_add(int a, int b)
 {
-	int i;
+	return (a + b);
+}
 
-	op_t ops[] = {
-		{"+", op_add},
-		{"-", op_sub},
-		{"*", op_mul},
-		{"/", op_div},
-		{"%", op_mod},
-		{NULL, NULL}
-	};
+/**
+* op_sub - subtraction
+* @a: minuend
+* @b: sustrnd
+* Return: result
+*/
 
-	i = 0;
-	while (ops[i].op != NULL)
+int op_sub(int a, int b)
+{
+	return (a - b);
+}
+
+/**
+* op_mul - multiplication
+* @a: multp 1
+* @b: multp 2
+* Return: result
+*/
+int op_mul(int a, int b)
+{
+	return (a * b);
+}
+
+/**
+* op_div - division
+* @a: divisr
+* @b: dividndo
+* Return: reult
+*/
+
+int op_div(int a, int b)
+{
+	if (b)
 	{
-		if (*ops[i].op == *s && s[1] == '\0')
-		{
-			return (ops[i].f);
-		}
-		i++;
+		return (a / b);
 	}
-	return (NULL);
+
+	printf("Error\n");
+	exit(100);
+}
+
+/**
+* op_mod - modulo
+* @a: vaper 1
+* @b: vaper 2
+* Return: result
+*/
+
+int op_mod(int a, int b)
+{
+	if (b)
+	{
+		return (a % b);
+	}
+
+	printf("Error\n");
+
+	exit(100);
+
 }
