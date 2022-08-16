@@ -14,7 +14,6 @@
 * Description: singly linked list node structure
 * for Holberton project
 */
-
 typedef struct listint_s
 
 {
