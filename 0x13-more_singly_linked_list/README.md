@@ -1,5 +1,3 @@
-0x13. C - More singly linked lists
-
 ### MORE SINGLY LINKED LISTS
 
 
