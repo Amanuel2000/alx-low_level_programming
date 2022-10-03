@@ -1,10 +1,10 @@
-#include <stdio.h>
 #include "main.h"
+#include <stdio.h>
 
 /**
-*print_to_98 - prints to 98
-*@n: the starting point
-*/
+ * print_to_98 - Print all natural numbers from n to 98
+ * @n: int type number
+ */
 
 void print_to_98(int n)
 {
@@ -12,21 +12,25 @@ void print_to_98(int n)
 	{
 		while (n <= 98)
 		{
-			if (n == 98)
-				printf("%d\n", n);
-			else
-				printf("%d, ", n);
-			n = n + 1;
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n++;
 		}
-	} else if (n > 98)
+	}
+	else
 	{
 		while (n >= 98)
 		{
-			if (n == 98)
-				printf("%d\n", n);
-			else
-				printf("%d, ", n);
-			n = n - 1;
+			printf("%d", n);
+			if (n != 98)
+			{
+				printf(", ");
+			}
+			n--;
 		}
 	}
+	printf("\n");
 }

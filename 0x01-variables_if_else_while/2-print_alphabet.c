@@ -1,19 +1,21 @@
-#include<stdio.h>
+#include <stdio.h>
+
 /**
-* main - print the letters of the alphabet
-* Description: print the letters of the alphabet
-* Return: Always 0 (Success)
-*/
+ * main - main block
+ * Description: Use `putchar` function to print the alphabet in lowercase.
+ * Return: 0
+ */
 
 int main(void)
 {
-	int i = 97;
+	char c = 'a';
 
-	while (i < 123)
+	while (c <= 'z')
 	{
-		putchar(i);
-		i++;
+		putchar(c);
+		c++;
 	}
-	putchar(10);
+
+	putchar('\n');
 	return (0);
 }

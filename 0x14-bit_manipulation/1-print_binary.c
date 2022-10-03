@@ -10,7 +10,6 @@
 unsigned long int _pow(unsigned int base, unsigned int power)
 {
 	unsigned long int num;
-
 	unsigned int i;
 
 	num = 1;
@@ -28,7 +27,6 @@ unsigned long int _pow(unsigned int base, unsigned int power)
 void print_binary(unsigned long int n)
 {
 	unsigned long int divisor, check;
-
 	char flag;
 
 	flag = 0;

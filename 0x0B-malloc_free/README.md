@@ -1,1 +1,1 @@
-Tasks about dynamic memory allocation
+Solutions to tasks on malloc and free 

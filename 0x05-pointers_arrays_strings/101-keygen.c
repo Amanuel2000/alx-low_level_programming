@@ -1,55 +1,21 @@
-#include <math.h>
-
 #include <stdio.h>
-
 #include <stdlib.h>
-
 #include <time.h>
 
-
-
-/**
-
-*main - Randomly generate pass
-
-*Decription: Program to randomly generates password.
-
-*Return: nothing
-
-*/
-
-
-
 int main(void)
-
 {
+	int myrand;
+	int count;
+	int total;
 
-	int pass, sum;
-
-
-
-	srand(time(0));
-
-
-
-	sum = 0;
-
-
-
-	while (sum <= 2645)
-
+	srand(time(NULL));
+	for (count = 0, total = 2772; total > 122; count++)
 	{
-
-		pass = (rand() % 128);
-
-		sum += pass;
-
-		printf("%c", pass);
-
+		myrand = (rand() % 125) + 1;
+		printf("%c", myrand);
+		total -= myrand;
 	}
-
-	printf("%c", 2772 - sum);
+	printf("%c", total);
 
 	return (0);
-
 }

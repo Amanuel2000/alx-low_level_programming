@@ -1,21 +1,21 @@
 #include <stdio.h>
 
 /**
-*main - print single digit numbers
-*Description: print single digit numbers
-*Return: Always 0 (Success)
-*/
+ * main - main block
+ * Description: Print all numbers of base 10, starting from 0.
+ * Return: 0
+ */
 
 int main(void)
 {
-	int i;
+	int x = 0;
 
-	i = 48;
-	while (i < 58)
+	while (x < 10)
 	{
-		putchar(i);
-		i++;
+		printf("%d", x);
+		x++;
 	}
-	putchar(10);
+
+	printf("\n");
 	return (0);
 }

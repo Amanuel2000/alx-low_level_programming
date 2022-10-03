@@ -1,24 +1,31 @@
 #include <stdio.h>
+
 /**
-*main -> assign a random number to the variable n each time it is executed
-*and print the last digit of the number stored in the variable n
-*Return: Always 0 (Success)
-*/
+ * main - main block
+ * Description: Print all possible combinations of two digits.
+ * Numbers must be separated by commas and a space.
+ * 01 and 10 are considered as the same combination of the two digits.
+ * Print only the smallest combination of two digits.
+ * Numbers should be printed in ascending order, with two digits.
+ * You can only use `putchar`.
+ * You can only use `putchar` up to 5 times.
+ * You are not allowed to use any variable of type `char`.
+ * Return: 0
+ */
+
 int main(void)
 {
-	int ch;
+	int x, y;
 
-	int n;
-
-	for (ch = 48; ch <= 57; ch++)
+	for (x = 48; x < 58; x++)
 	{
-		for (n = 49; n <= 57; n++)
+		for (y = 49; y < 58; y++)
 		{
-			if (n > ch)
+			if (y > x)
 			{
-				putchar(ch);
-				putchar(n);
-				if (ch != 56 || n != 57)
+				putchar(x);
+				putchar(y);
+				if (x < 56 || y < 57)
 				{
 					putchar(44);
 					putchar(32);
@@ -26,6 +33,6 @@ int main(void)
 			}
 		}
 	}
-putchar(10); /* this is an ascii code for new line*/
-return (0);
+	putchar('\n');
+	return (0);
 }

@@ -1,24 +1,26 @@
 #include <stdio.h>
 
 /**
-*main - print the letters of the alphabet
-*Description: print the letters of the alphabet except e, q
-*
-* Return: Always 0 (Success)
-*/
+ * main - main block
+ * Description: Print all numbers of base64 in lowercase.
+ * You can only use `putchar`, and only 3 times.
+ * Return: 0
+ */
 
 int main(void)
 {
-	int i = 0;
+	int x;
+	char c;
 
-	while (i < 48)
+	for (x = 48; x < 58; x++)
 	{
-		if (i < 10)
-			putchar(i + '0');
-		else if (i > 41)
-		putchar(i - 10 + 'A');
-		i++;
+		putchar(x);
 	}
-	putchar(10);
+
+	for (c = 'a'; c < 'g'; c++)
+	{
+		putchar(c);
+	}
+	putchar('\n');
 	return (0);
 }
